@@ -3,7 +3,7 @@ from flask import render_template, request
 import unirest
 from forms import MessageForm
 from app import database
-
+from app import simple
 @app.route('/')
 @app.route('/index/')
 def index():
@@ -27,4 +27,3 @@ def emotion_post():
   		}
 	)
 	return render_template("my_form.html",mood=response.body['result']['sentiment'],form=MessageForm())
-
