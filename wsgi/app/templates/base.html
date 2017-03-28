@@ -14,11 +14,19 @@
   <nav class="light-blue lighten-1" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo</a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#">Navbar Link</a></li>
+        <li><a href="#">{% for item in nav.top %}
+<li class="">
+<a href="{{ item.url }}">{{ item.label }}</a>
+</li>
+{% endfor %}</a></li>
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
-        <li><a href="#">Navbar Link</a></li>
+        <li><a href="#">{% for item in nav.top %}
+<li class="">
+<a href="{{ item.url }}">{{ item.label }}</a>
+</li>
+{% endfor %}</a></li>
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
@@ -48,20 +56,13 @@
       <div class="row">
         <div class="col l6 s12">
           <h5 class="white-text">About us</h5>
-          <p class="grey-text text-lighten-4">We are a startup.</p>
-
-
+          <p class="grey-text text-lighten-4">Computer Science Student.</p>
         </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Visit</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Our homepage</a></li>
-          </ul>
-        </div>
+
         <div class="col l3 s12">
           <h5 class="white-text">Contact</h5>
           <ul>
-            <li><a class="white-text" href="mailto:youremail@qmul.ac.uk">youremail@qmul.ac.uk</a></li>
+            <li><a class="white-text" href="mailto:youremail@qmul.ac.uk">viral.patel@se16.qmul.ac.</a></li>
           </ul>
         </div>
       </div>

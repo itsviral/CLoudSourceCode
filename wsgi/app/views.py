@@ -2,8 +2,18 @@ from app import app
 from flask import render_template, request
 import unirest
 from forms import MessageForm
-from app import database
+# from app import database
 from app import simple
+from flask_navigation import Navigation
+
+nav = Navigation(app)
+nav.Bar('top', [
+nav.Item('Home', 'index'),
+nav.Item('Emotion App', 'emotion_post'),
+nav.Item('Visualization','polynomial')
+])
+
+
 @app.route('/')
 @app.route('/index/')
 def index():
