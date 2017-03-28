@@ -6,5 +6,5 @@ setup(name='vapapitest1',
       author='viral',
       author_email='viral.patel@se16.qmul.ac.uk',
       url='https://www.python.org/community/sigs/current/distutils-sig',
-      install_requires=['Flask','unirest','flask-wtf','flask-babel','markdown','flup','Flask-PyMongo'],
+      install_requires=['Flask','unirest','flask-wtf','flask-babel','Flask-PyMongo','flask_navigation'],
       )
