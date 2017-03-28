@@ -42,9 +42,29 @@
     </div>
   </nav>
 
+  <p> Select your settings: </p>
+    <form name="color_button" method='GET'>
+        Color:
+        <select name="color">
+            <option {{ "selected" if color|indent(4)|safe == "Red" }} value="Red">Red</option>
+            <option {{ "selected" if color|indent(4)|safe == "Green" }} value="Green">Green</option>
+            <option {{ "selected" if color|indent(4)|safe == "Blue" }} value="Blue">Blue</option>
+            <option {{ "selected" if color|indent(4)|safe == "Black" }} value="Black">Black</option>
+        </select>
+        <br>
+        From:
+        <input type="text" name="_from" value="{{ _from }}">
+        <br>
+        To:
+        <input type="text" name="to" value="{{ to }}">
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+    {{ plot_div|indent(4)|safe }}
+    <p> Demonstrates some very simple embedding into a webpage</p>
 
 
-  <div class="section no-pad-bot" id="index-banner">
+<div class="section no-pad-bot" id="index-banner">
     <div class="container">
       <br><br>
       <h1 class="header center orange-text">{% block title %}{% endblock %}</h1>
@@ -56,36 +76,9 @@
     </div>
   </div>
 
-
-    <br><br>
-
     <div class="section">
-
     </div>
   </div>
-
-  <p> Select your settings: </p>
-  <form name="color_button" method='GET'>
-      Color:
-      <select name="color">
-          <option {{ "selected" if color|indent(4)|safe == "Red" }} value="Red">Red</option>
-          <option {{ "selected" if color|indent(4)|safe == "Green" }} value="Green">Green</option>
-          <option {{ "selected" if color|indent(4)|safe == "Blue" }} value="Blue">Blue</option>
-          <option {{ "selected" if color|indent(4)|safe == "Black" }} value="Black">Black</option>
-      </select>
-      <br>
-      From:
-      <input type="text" name="_from" value="{{ _from }}">
-      <br>
-      To:
-      <input type="text" name="to" value="{{ to }}">
-      <br>
-      <button type="submit">Submit</button>
-  </form>
-  {{ plot_div|indent(4)|safe }}
-  <p> Demonstrates some very simple embedding into a webpage</p>
-
-
 
   <footer class="page-footer orange">
     <div class="container">
