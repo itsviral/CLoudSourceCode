@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset='utf-8' />
-  <meta http-equiv='content-type' content='text/html; charset=utf-8' />
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>Embed Demo</title>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+ <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+ <title>Vizualize </title>
 
-  <!-- CSS  -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="/static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="/static/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+ <!-- CSS -->
 
-  {{ js_resources|indent(4)|safe }}
+ <!-- Compiled and minified CSS -->
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection">
 
-  {{ css_resources|indent(4)|safe }}
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-  {{ plot_script|indent(4)|safe }}
+{{ js_resources|indent(4)|safe }}
 
+{{ css_resources|indent(4)|safe }}
+
+{{ plot_script|indent(4)|safe }}
 
 </head>
 <body>
@@ -110,11 +109,9 @@
     </div>
   </footer>
 
+  <!-- Scripts-->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
 
-  <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="/static/js/materialize.js"></script>
-  <script src="/static/js/init.js"></script>
-
-  </body>
+</body>
 </html>
