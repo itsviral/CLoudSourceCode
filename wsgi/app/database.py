@@ -3,8 +3,8 @@ from flask import jsonify
 from app import app
 import os
 
-app.config['MONGO_DBNAME']= os.environ['OPENSHIFT_APP_NAME']
-app.config['MONGO_URI']= os.environ['OPENSHIFT_MONGODB_DB_URL']+os.environ['OPENSHIFT_APP_NAME']
+app.config['MONGO_DBNAME'] = os.environ['OPENSHIFT_APP_NAME']
+app.config['MONGO_URI'] = os.environ['OPENSHIFT_MONGODB_DB_URL'] + os.environ['OPENSHIFT_APP_NAME']
 
 mongo = PyMongo(app)
 
@@ -20,7 +20,7 @@ def get_collection_methods_and_attributes():
 
 
 @app.route('/database/collections', methods=['GET'])
-def get_all():
+def get_all_collections():
 	return jsonify({'result' : mongo.db.collection_names()})
 
 @app.route('/database/London/sample', methods=['GET'])
